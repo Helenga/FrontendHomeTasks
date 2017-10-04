@@ -6,20 +6,20 @@ function App() {
     // создание 2 разных каналов
     var channel1 = notifier.createChannel('channel1');
     var channel2 = notifier.createChannel('channel2');
-    // создание callback-параметров
 
+    // создание callback-параметров
     var lastOnly = function(subscriptions) {
-        var sortedMessages = [];
-        subscriptions.map(function(channel) {
-            sortedMessages.push(channel.messages[channel.messages.length-1]);
+        var sortedMessages =
+         subscriptions.map(function(channel) {
+            return channel.messages[channel.messages.length-1];
         });
         return sortedMessages;
     }
 
     var attachChannelName = function(subscriptions) {
-        var sortedMessages = [];
+        var sortedMessages =
         subscriptions.map(function(channel) {
-            sortedMessages.push(channel.name + " : " + channel.messages.join(", "));
+            return channel.name + " : " + channel.messages.join(", ");
         });
         return sortedMessages;
     }
@@ -27,7 +27,7 @@ function App() {
     var numberOfAlreadyReadMessages = {};
     var newOnly = function (subscriptions) {
         var sortedMessages = [];
-        subscriptions.map(function (channel) {
+        subscriptions.forEach(function (channel) {
             var counter = 0;
             if (numberOfAlreadyReadMessages[channel.name] == null) {
                 numberOfAlreadyReadMessages[channel.name] = 0;
