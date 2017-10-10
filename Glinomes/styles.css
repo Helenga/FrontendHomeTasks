@@ -1,0 +1,224 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "PT Serif", serif;
+    background-color: #F0F0F0;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 400;
+}
+
+header {
+    position: absolute;
+    z-index: 100;
+    height: 128px;
+    top: 0;
+    width: 100%;
+    color: #FFFFFF;
+}
+
+header .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+header ul {
+    text-align: right;
+    margin: 0;
+}
+
+header li h3 {
+    position: relative;
+    margin: 0;
+}
+
+header li {
+    position: relative;
+    display: inline-block;
+    list-style: none;
+    margin: 20px;
+    color: #FFF;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+header li:before {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #d0021b;
+    transition: 0.3s ease;
+}
+
+header li:hover:before {
+    height: 12px;
+}
+
+header .logo {
+    margin: 20px 0;
+    font-size: 36px;
+}
+
+.logo .logo-left, .logo-right {
+    width: 36px;
+    height: 30px;
+    background: #d0021b;
+    border-radius: 64px 0 64px 0;
+    display: inline-flex;
+}
+
+.logo-right {
+    background: whitesmoke;
+}
+
+.masthead {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url("./bg.jpg") center no-repeat;
+    background-size: cover;
+}
+
+.masthead > h1 {
+    position: absolute;
+    width: 100%;
+    top: calc(50% - 41px);
+    margin: 0;
+    text-align: center;
+    font-size: 64px;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    color: #fff;
+    transition: 1s ease;
+}
+
+.masthead > h1:hover {
+    letter-spacing: 30px;
+}
+
+.tint {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.3;
+}
+
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+}
+
+.contentBox {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    background-color: ghostwhite;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    bottom: 0;
+    margin-top: -100px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.block {
+    padding-top: 3%;
+    height: 22%;
+    width: 80%;
+    text-align: left;
+    position: relative;
+}
+
+.block p {
+    font-weight: 100;
+    font-size: 20px;
+    letter-spacing: 2px;
+    overflow: auto;
+}
+
+.block, .half h2 {
+    font-size: 38px;
+    font-weight: 600;
+    letter-spacing: 8px;
+}
+
+.block h2 > span {
+    color: #d0021b;
+    font-weight: 600;
+    text-align: center;
+}
+
+.contentBox .half {
+    width: 50%;
+    height: 70%;
+    display: inline-block;
+    margin-bottom: 10%;
+    vertical-align: top;
+    position: relative;
+}
+
+.half img {
+    max-width: 70%;
+    max-height: 100%;
+}
+
+.half form {
+    display: block;
+    text-align: left;
+    letter-spacing: 2px;
+    height: 100%;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.half form label, input, submit {
+    width: 78%;
+    margin: 10px;
+    margin-left: 0;
+}
+
+.half form input {
+    border-radius: 10px;
+    height: 30px;
+}
+
+#button {
+    background-color: #d0021b;
+    height: 30px;
+    color: ghostwhite;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: "Droid Sans";
+    box-shadow: inset darkgrey;
+}
+
+.contentBox .decor-1, .decor-2 {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.025);
+}
+
+.decor-1 {
+    height: 50%;
+    width: 45%;
+    border-radius: 0 3px 600px 3px;
+    top: 0;
+    left: 0;
+}
+
+.decor-2 {
+    height: 70%;
+    width: 55%;
+    border-radius: 800px 5px 0 5px;
+    bottom: 0;
+    right: 0;
+}
